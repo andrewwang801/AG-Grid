@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="header">AG GRID EXAMPLE FOR GREENDAY TEST</h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">
+    <button class="btn btn-sm btn-success button" (click)="Add()">Add Product</button>&nbsp;&nbsp;
+    <button class="btn btn-sm btn-primary" (click)="editProduct()">Edit Product</button>&nbsp;&nbsp;
+    <button class="btn btn-sm btn-danger" (click)="deleteProduct()">Delete Product</button>
+</div>
+</div>
+    <br>
+    <ag-grid-angular style="width: 100%; height: 1000px;" class="ag-theme-blue" (gridReady)="onGridReady($event)"
+        [columnDefs]="columnDefs" [rowData]="products" rowSelection="single" pagination="true" paginationPageSize=300
+      >
+    </ag-grid-angular>
+</div>
